@@ -1,0 +1,20 @@
+html {
+    /* Set border-box as the global default */
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    /* Allow each element to override */
+    box-sizing: inherit;
+}
+body {
+    font-family: "Raleway", sans-serif, verdana;
+}
+#slogan-titre {
+    font-weight: bold;
+    color: blue;
+}
+#slogan-description {
+    color: blueviolet;
+}
