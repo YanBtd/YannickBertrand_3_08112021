@@ -78,9 +78,20 @@ section article {
 }
 #coeur2:hover {
     cursor: pointer;
-    background-image: linear-gradient(to bottom, #9356dc, red);
-    background-clip: text;
-}
+    color: #ff79da;
+    transition-property: color;
+    transition-duration: 2s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+    // animation-name: couleur;
+    // animation-duration: 2s;
+    // animation-fill-mode: forwards;
+    // transform: scale(1.04);
+  }
+//   @keyframes couleur {
+//     0% { color: red }
+//     100% { color: violet }
+// }
 h1 {
     font-size: 22px;
     padding: 0;

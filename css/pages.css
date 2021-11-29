@@ -91,8 +91,11 @@ section article {
 
 #coeur2:hover {
   cursor: pointer;
-  background-image: linear-gradient(to bottom, #9356dc, red);
-  background-clip: text;
+  color: #ff79da;
+  transition-property: color;
+  transition-duration: 2s;
+  transition-delay: 0s;
+  transition-timing-function: ease;
 }
 
 h1 {

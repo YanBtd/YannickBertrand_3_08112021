@@ -222,18 +222,18 @@ main .ville h2 {
 
 .card__description .fas {
   color: transparent;
-  background-image: linear-gradient(to bottom, #9356dc, red);
-  background-clip: text;
-  opacity: 0;
-  transition: all 300ms ease-in-out;
 }
 
 .card__description .fas:hover {
-  opacity: 1;
+  cursor: pointer;
+  color: #ff79da;
+  transition-property: color;
+  transition-duration: 2s;
+  transition-delay: 0s;
+  transition-timing-function: ease;
   /* ATT: écrase le `transform` dans 'i' */
   /* transform: scale(1.05); */
   /* Lui donner le transform de i en premier */
-  transform: translateY(-50%) scale(1.04);
 }
 
 .nouveau {

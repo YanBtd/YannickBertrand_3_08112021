@@ -220,18 +220,27 @@ main .ville {
 }
 .card__description .fas {
     color: transparent;
-    background-image: linear-gradient(to bottom, #9356dc, red);
-    background-clip: text;
-    opacity: 0;
-    transition: all 300ms ease-in-out;
 }
 .card__description .fas:hover {
-    opacity: 1;
+        cursor: pointer;
+        color: #ff79da;
+        transition-property: color;
+        transition-duration: 2s;
+        transition-delay: 0s;
+        transition-timing-function: ease;
+        // animation-name: couleur;
+        // animation-duration: 2s;
+        // animation-fill-mode: forwards;
     /* ATT: écrase le `transform` dans 'i' */
     /* transform: scale(1.05); */
     /* Lui donner le transform de i en premier */
-    transform: translateY(-50%) scale(1.04);
+    // transform: translateY(-50%) scale(1.04);
 }
+// @keyframes couleur {
+//     0% { color: red }
+//     100% { color: violet }
+// }
+
 .nouveau {
     position: relative;
 }
