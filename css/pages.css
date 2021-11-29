@@ -126,6 +126,10 @@ h2:before {
   border-bottom: 2px solid #99e2d0;
 }
 
+#articles-entrees {
+  height: 350px;
+}
+
 .articles-wrapper {
   height: 250px;
   display: flex;
@@ -237,7 +241,7 @@ article div h3 {
 
 @keyframes translate-prix {
   from {
-    transform: translateX(300%);
+    transform: translateX(350%);
   }
   to {
     transform: translateX(0);
