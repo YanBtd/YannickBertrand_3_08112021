@@ -128,7 +128,7 @@ main .ville h2 {
   display: flex;
   padding-left: 1.9rem;
   padding-right: 1.9rem;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 @media screen and (max-width: 930px) {
   .fonctionnement ol {
@@ -157,7 +157,7 @@ main .ville h2 {
   border-radius: 50%;
   position: absolute;
   bottom: 0.6rem;
-  left: -1rem;
+  left: -0.8rem;
 }
 .fonctionnement li:hover {
   transform: scale(1.02);
@@ -237,7 +237,6 @@ main .ville h2 {
 }
 
 .nouveau {
-  /* border: 2px solid yellow; */
   position: relative;
 }
 
@@ -302,7 +301,7 @@ footer h2 {
   font-size: 1.3rem;
 }
 footer h2:before {
-  /* Enlever le border */
+  /* Enlever le border bottom*/
   border-bottom: 0;
 }
 footer ul {
