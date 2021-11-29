@@ -1,3 +1,4 @@
+@use "./utils/mixins/box-shadow.scss" as bs;
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
@@ -32,9 +33,6 @@ header nav {
             font-weight: bolder;
         }
     }
-    img {
-        background-color: lightcoral;
-    }
     span {
         font-family: "Shrikhand", cursive;
         font-size: 1.5rem;
@@ -42,6 +40,14 @@ header nav {
 }
 section {
     background-color: #f2f2f2;
+}
+section article {
+    //Super effet
+//     -webkit-box-shadow: 4px 4px 4px -1px rgba(91,91,91,0.75); 
+// box-shadow: 4px 4px 4px -1px rgba(91,91,91,0.75);
+-webkit-box-shadow: 0px 2px 5px 0px rgba(190,190,190,0.75); 
+box-shadow: 0px 2px 5px 0px rgba(190,190,190,0.75);
+    margin-top: 1rem;
 }
 .sections-wrapper {
     background-color: white;
@@ -147,21 +153,26 @@ article div h3 {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
+    // @include bs.box-shadow;
 }
 .composition-et-prix {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    // @include bs.box-shadow;
+    
     & p:first-child {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         padding-left: 10px;
         margin-top: 0;
+        // @include bs.box-shadow;
     }
     & p:nth-child(2) {
         margin-right: 15px;
         margin-top: 0;
+        // @include bs.box-shadow;
     }
 }
 #fas-fa-check-circle {
@@ -242,6 +253,7 @@ article div h3 {
     justify-content: center;
     align-items: center;
     background-color: #f3f3f3;
+  
 }
 #commander span {
     display: flex;
@@ -254,11 +266,11 @@ article div h3 {
     border-radius: 20px;
     background-image: linear-gradient(to top, #9356dc, #ff79da);
     opacity: 1;
+    @include bs.box-shadow; 
 }
 #commander span:hover {
     opacity: 0.8;
 }
-
 footer {
     height: auto;
     background-color: #353535;
