@@ -251,28 +251,28 @@ main .ville h2 {
 }
 
 .card__image-1 {
-  background-image: url("../../images/pages/la-palette-du-gout.jpg");
+  background-image: url("../images/pages/la-palette-du-gout.jpg");
   height: 15rem;
   background-size: cover;
   border-radius: 1rem 1rem 0 0;
 }
 
 .card__image-2 {
-  background-image: url("../../images/pages/la-note-enchantee.jpg");
+  background-image: url("../images/pages/la-note-enchantee.jpg");
   height: 15rem;
   background-size: cover;
   border-radius: 1rem 1rem 0 0;
 }
 
 .card__image-3 {
-  background-image: url("../../images/pages/a-la-francaise.jpg");
+  background-image: url("../images/pages/a-la-francaise.jpg");
   height: 15rem;
   background-size: cover;
   border-radius: 1rem 1rem 0 0;
 }
 
 .card__image-4 {
-  background-image: url("../../images/pages/le-delice-des-sens.jpg");
+  background-image: url("../images/pages/le-delice-des-sens.jpg");
   height: 15rem;
   background-size: cover;
   border-radius: 1rem 1rem 0 0;
