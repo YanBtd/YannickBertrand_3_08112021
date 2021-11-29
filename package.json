@@ -1,0 +1,24 @@
+{
+  "name": "yannickbertrand_3_08112021",
+  "version": "1.0.0",
+  "description": "Projet_3_OpenClassrooms-Ohmyfood",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch scss/scss-index/index.scss css/css-index/index.css",
+    "sass-pages": "sass --watch scss/scss-pages/pages.scss css/css-pages/pages.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YanBtd/YannickBertrand_3_08112021.git"
+  },
+  "author": "Yannick BERTRAND",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YanBtd/YannickBertrand_3_08112021/issues"
+  },
+  "homepage": "https://github.com/YanBtd/YannickBertrand_3_08112021#readme",
+  "devDependencies": {
+    "sass": "^1.43.5"
+  }
+}

@@ -1,0 +1,331 @@
+@use "../utils/mixins/box-shadow.scss" as bs;
+@use "../utils/mixins/zoom.scss" as zm;
+@use "../utils/mixins/pointer.scss" as pt;
+@use "../utils/mixins/couleurs.scss" as clrs;
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+html {
+    // /* Set border-box as the global default */
+    box-sizing: border-box;
+    // /* border: 1px solid red;  */
+}
+*,
+*:before,
+*:after {
+    // /* Allow each element to override */
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+main {
+    // padding: 0 1rem;
+    background-color: #f3f3f3;
+}
+.loader {
+    position: fixed;
+    display: grid;
+    // place-items: flex-start auto;
+    place-items: center ;
+    background-color: #f3f3f3;
+    height: 100%;
+    inset: 0;
+    z-index: 1;
+    opacity: .94;
+     animation: disappear 300ms 2s forwards;
+    // transform: scale(0);
+    // animation-fill-mode: forwards;
+    // animation-delay: 3s;
+    transform-origin: top;
+    &::after {
+        content: "";
+        height: 100px;
+        width: 100px;
+        border-top:  10px solid clrs.$primaire;
+        border-bottom: 10px solid clrs.$secondaire;
+        border-radius: 50%;
+        animation: spin 0.75s infinite linear;
+    }
+}
+@keyframes disappear {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+header {
+    //  background-color: aquamarine; 
+    font-family: "Shrikhand", cursive;
+    // text-align: center;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 196px;
+        height: 34px;
+    }
+}
+main .ville {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #e0e0e0;
+    text-align: center;
+    & i {
+        &.fas.fa-map-marker-alt {
+            font-size: 1rem;
+        }
+    }
+    h2 {
+        font-size: 1rem;
+        font-weight: 500;
+        position: relative;
+        top: .2rem;
+    }
+}
+.explorer {
+    text-align: center;
+    background-color: #f3f3f3;
+    & h2 {
+        margin-top: 2rem;
+    }
+    & button {
+        background-image: linear-gradient(to top, #9356dc, #ff79da);
+        color: white;
+        font-size: 1rem;
+        padding: 1rem 1rem;
+        border: none;
+        border-radius: 2rem;
+        @include bs.box-shadow;
+        // box-shadow: 3px 4px 8px 0px rgba(0, 0, 0, 0.75);
+        // -webkit-box-shadow: 3px 4px 8px 0px rgba(0, 0, 0, 0.75);
+        // -moz-box-shadow: 3px 4px 5px 8px rgba(0, 0, 0, 0.75);
+        // transition: transform 200ms;
+        margin-top: 0.5rem;
+        margin-bottom: 3rem;
+        &:hover {
+            // transform: scale(1.02);
+            opacity: 0.9;
+            @include pt.pointer;
+        }
+    }
+}
+.fonctionnement {
+    // height: 320px;
+    height: auto;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    counter-reset: steps;
+    & h2 {
+        margin-left: 2rem;
+    }
+    & ol {
+        display: flex;
+        padding-left: 1.9rem;
+        padding-right: 1.9rem;
+        // flex-wrap: wrap;
+        gap: 2rem;
+        @media screen and (max-width:930px) {
+            flex-direction: column;
+        }
+    }
+    & li {
+        position: relative;
+        &::before {
+            content: counter(steps);
+            counter-increment: steps;
+            color: white;
+            background-color: clrs.$primaire;
+            width: 2rem;
+            height: 2rem;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            position: absolute;
+            bottom: .6rem;
+            left: -1rem;
+        }
+        list-style-type: none;
+        background-color: #f3f3f3;
+        padding: 1rem 2rem;
+        // border: 1px solid red;
+        flex-grow: 1;
+        border-radius: 1rem;
+        @include bs.box-shadow;
+        &:hover {
+            @include zm.zoom;
+            @include pt.pointer;
+            background-color: #eee1f8;
+            opacity: 0.8;
+        }
+        & i.fas {
+            margin-right: 1rem;
+            color: gray;
+        }
+    }
+}
+// Import 'styles.scss' de index.html
+// /* Les 4 menus */
+
+.menus {
+    background-color: #f3f3f3;
+    height: auto;
+    padding-bottom: 3rem;
+    h2 {
+        margin-bottom: 2rem;
+        margin-top: 0rem;
+        padding-top: 2rem;
+        margin-left: 2rem
+    }
+    .menus__cards{
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+.card__description {
+    position: relative;
+    background-color: white;
+    border-radius: 0 0 1rem 1rem;
+}
+.card__description h3,
+.card__description p {
+    margin: 0;
+    padding-top: .5rem;
+    padding-left: 1rem;
+}
+.card__description p {
+    padding-bottom: .5rem;
+}
+.card__description i {
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.card__description .fas {
+    color: transparent;
+    /* background-image: linear-gradient(red,blue); */
+    /* background-image: linear-gradient(to top, #9356dc, #FF79DA); */
+    background-image: linear-gradient(to bottom, #9356dc, red);
+    background-clip: text;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+}
+.card__description .fas:hover {
+    opacity: 1;
+    /* ATT: écrase le `transform` dans 'i' */
+    /* transform: scale(1.05); */
+    /* Lui donner le transform de i en premier */
+    transform: translateY(-50%) scale(1.04);
+}
+.nouveau {
+    /* border: 2px solid yellow; */
+    position: relative;
+}
+.nouveau::before {
+    content: "Nouveau";
+    position: absolute;
+    height: 2rem;
+    width: 5rem;
+    background-color: #99e2d0;
+    display: grid;
+    place-items: center;
+    top: 1rem;
+    right: 1rem;
+}
+.card__image-1 {
+    background-image: url("../../images/pages/la-palette-du-gout.jpg");
+    height: 15rem;
+    background-size: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+.card__image-2 {
+    background-image: url("../../images/pages/la-note-enchantee.jpg");
+    height: 15rem;
+    background-size: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+.card__image-3 {
+    background-image: url("../../images/pages/a-la-francaise.jpg");
+    height: 15rem;
+    background-size: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+.card__image-4 {
+    background-image: url("../../images/pages/le-delice-des-sens.jpg");
+    height: 15rem;
+    background-size: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+@media screen and (max-width:767px) {
+    .menus .menus__cards{
+        /* background-color: brown; */
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+}
+footer {
+    height: auto;
+    background-color: #353535;
+    padding-bottom: 1rem;
+    h2 {
+        color: white;
+        font-family: "Shrikhand", cursive;
+        padding-top: 1rem;
+        margin-top: 0;
+        padding-left: 2rem;
+        font-size: 1.3rem;
+        &:before {
+            /* Enlever le border */
+            border-bottom: 0;
+        }
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 2rem;
+        li {
+            display: flex;
+            align-items: center;
+            height: 30px;
+            i {
+                color: yellow;
+            }
+            a {
+                text-decoration: none;
+                color: white;
+            }
+            &#partenaire i {
+                margin-right: 5px;
+            }
+            &#restaurant i {
+                margin-right: 10px;
+                margin-left: 2px;
+            }
+        }
+    }
+}
+
+
+
+
