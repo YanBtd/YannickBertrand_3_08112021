@@ -187,16 +187,8 @@ article div h3 {
   margin-top: 0;
 }
 
-#fas-fa-check {
-  color: red;
-}
-
 #fas-fa-check-circle {
   color: white;
-}
-
-#far-fa-check-circle {
-  color: chartreuse;
 }
 
 .articles-wrapper article {
@@ -206,19 +198,11 @@ article div h3 {
 .articles-wrapper article .article-description {
   width: 100%;
 }
-.articles-wrapper article p#prix {
-  background-color: blue;
-}
 .articles-wrapper article:hover {
   cursor: pointer;
   opacity: 1;
 }
 .articles-wrapper article:hover .article-description > div :nth-child(2) {
-  background-color: chartreuse;
-  animation: translate-prix 0.5s ease 1;
-}
-.articles-wrapper article:hover p.prix {
-  background-color: chartreuse;
   animation: translate-prix 0.5s ease 1;
 }
 .articles-wrapper article h3 {
@@ -250,7 +234,7 @@ article div h3 {
 
 @keyframes translate-prix {
   from {
-    transform: translateX(400%);
+    transform: translateX(300%);
   }
   to {
     transform: translateX(0);

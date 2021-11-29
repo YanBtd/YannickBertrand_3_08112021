@@ -1,7 +1,7 @@
-@use "../utils/mixins/box-shadow.scss" as bs;
-@use "../utils/mixins/zoom.scss" as zm;
-@use "../utils/mixins/pointer.scss" as pt;
-@use "../utils/mixins/couleurs.scss" as clrs;
+@use "./utils/mixins/box-shadow.scss" as bs;
+@use "./utils/mixins/zoom.scss" as zm;
+@use "./utils/mixins/pointer.scss" as pt;
+@use "./utils/mixins/couleurs.scss" as clrs;
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
@@ -13,7 +13,7 @@ html {
 *,
 *:before,
 *:after {
-    // /* Allow each element to override */
+    // /* Allow each element to override */*/
     box-sizing: inherit;
 }
 body {
