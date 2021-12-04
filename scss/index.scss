@@ -1,7 +1,7 @@
 @use "./utils/mixins/box-shadow.scss" as bs;
 @use "./utils/mixins/zoom.scss" as zm;
 @use "./utils/mixins/pointer.scss" as pt;
-@use "./utils/mixins/couleurs.scss" as clrs;
+@import "./utils/mixins/couleurs.scss";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
@@ -21,7 +21,7 @@ body {
     font-family: "Roboto", sans-serif;
 }
 main {
-    background-color: #f3f3f3;
+    background-color: $bgcolor-gris;
 }
 .loader {
     position: fixed;
@@ -31,7 +31,7 @@ main {
     height: 100%;
     inset: 0;
     z-index: 1;
-    opacity: 0.94;
+    opacity: 1;
     animation: disappear 300ms 1.5s forwards;
     // transform: scale(0);
     // animation-fill-mode: forwards;
@@ -41,8 +41,8 @@ main {
         content: "";
         height: 100px;
         width: 100px;
-        border-top: 10px solid clrs.$primaire;
-        border-bottom: 10px solid clrs.$secondaire;
+        border-top: 10px solid #9356dc;
+        border-bottom: 10px solid #ff79da;
         border-radius: 50%;
         animation: spin 0.75s infinite linear;
     }
@@ -143,7 +143,7 @@ main .ville {
             content: counter(steps);
             counter-increment: steps;
             color: white;
-            background-color: clrs.$primaire;
+            background-color: #9356dc;
             width: 2rem;
             height: 2rem;
             display: grid;
@@ -218,12 +218,12 @@ main .ville {
     top: 50%;
     transform: translateY(-50%);
 }
-.card__description .fas {
+.card__description .fas.fa-heart{
     color: transparent;
 }
-.card__description .fas:hover {
+.card__description .fas.fa-heart:hover {
         cursor: pointer;
-        color: #ff79da;
+        color: $primaire;
         transition-property: color;
         transition-duration: 2s;
         transition-delay: 0s;

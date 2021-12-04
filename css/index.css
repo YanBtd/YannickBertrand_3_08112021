@@ -28,7 +28,7 @@ main {
   height: 100%;
   inset: 0;
   z-index: 1;
-  opacity: 0.94;
+  opacity: 1;
   animation: disappear 300ms 1.5s forwards;
   transform-origin: top;
 }
@@ -36,8 +36,8 @@ main {
   content: "";
   height: 100px;
   width: 100px;
-  border-top: 10px solid #9356DC;
-  border-bottom: 10px solid #FF79DA;
+  border-top: 10px solid #9356dc;
+  border-bottom: 10px solid #ff79da;
   border-radius: 50%;
   animation: spin 0.75s infinite linear;
 }
@@ -149,7 +149,7 @@ main .ville h2 {
   content: counter(steps);
   counter-increment: steps;
   color: white;
-  background-color: #9356DC;
+  background-color: #9356dc;
   width: 2rem;
   height: 2rem;
   display: grid;
@@ -220,13 +220,13 @@ main .ville h2 {
   transform: translateY(-50%);
 }
 
-.card__description .fas {
+.card__description .fas.fa-heart {
   color: transparent;
 }
 
-.card__description .fas:hover {
+.card__description .fas.fa-heart:hover {
   cursor: pointer;
-  color: #ff79da;
+  color: #9356dc;
   transition-property: color;
   transition-duration: 2s;
   transition-delay: 0s;

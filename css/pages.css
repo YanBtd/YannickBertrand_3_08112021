@@ -91,7 +91,7 @@ section article {
 
 #coeur2:hover {
   cursor: pointer;
-  color: #ff79da;
+  color: #9356dc;
   transition-property: color;
   transition-duration: 2s;
   transition-delay: 0s;

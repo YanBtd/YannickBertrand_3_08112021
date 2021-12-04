@@ -1,4 +1,5 @@
 @use "./utils/mixins/box-shadow.scss" as bs;
+@import "./utils/mixins/couleurs.scss";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
@@ -78,7 +79,8 @@ section article {
 }
 #coeur2:hover {
     cursor: pointer;
-    color: #ff79da;
+    color: $primaire;
+    // color: transparent;
     transition-property: color;
     transition-duration: 2s;
     transition-delay: 0s;
@@ -90,7 +92,8 @@ section article {
   }
 //   @keyframes couleur {
 //     0% { color: red }
-//     100% { color: violet }
+//     50% {color: #ff79da}
+//     100% { color: #9356dc}
 // }
 h1 {
     font-size: 22px;
