@@ -46,7 +46,6 @@ section {
 }
 
 section article {
-  -webkit-box-shadow: 0px 2px 5px 0px rgba(190, 190, 190, 0.75);
   box-shadow: 0px 2px 5px 0px rgba(190, 190, 190, 0.75);
   margin-top: 1rem;
 }
@@ -123,55 +122,84 @@ h2:before {
   border-bottom: 2px solid #99e2d0;
 }
 
-#articles-entrees {
-  height: 350px;
-}
-
 .articles-wrapper {
-  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
+#articles-entrees article:nth-child(4) {
+  animation: translate-article 1.5s ease-in-out 1;
+}
+
+.articles-wrapper article:nth-child(1) {
+  animation: translate-article 1.5s ease-in-out 1;
+  animation-delay: -0.5s;
+}
+.articles-wrapper article:nth-child(2) {
+  animation: translate-article 1.5s ease-in-out 1;
+  animation-delay: -0.3s;
+}
+.articles-wrapper article:nth-child(3) {
+  animation: translate-article 1.5s ease-in-out 1;
+  animation-delay: -0.1s;
+}
+
+@keyframes translate-article {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+}
 .articles-wrapper article {
   background-color: white;
+  opacity: 0.8;
   display: flex;
   justify-content: space-between;
   height: 30%;
   width: 95%;
   overflow: hidden;
   border-radius: 15px;
-  animation: accordeon 1s ease-in-out;
 }
-
-@keyframes accordeon {
-  from {
-    opacity: 0;
-    height: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.articles-wrapper article .article-description {
+  width: 100%;
 }
-article div div p {
-  font-size: 14px;
+.articles-wrapper article:hover {
+  cursor: pointer;
+  opacity: 1;
 }
-
-article div h3 {
+.articles-wrapper article:hover .article-description > div :nth-child(2) {
+  animation: translate-prix 0.5s ease 1;
+}
+.articles-wrapper article h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   font-size: 16px;
+  padding-left: 10px;
 }
-
-.article-description {
+.articles-wrapper article p {
+  font-size: 14px;
+}
+.articles-wrapper article:hover .article-coche-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
+  width: 16%;
+  visibility: visible;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+  background-color: #99e2d0;
+}
+.articles-wrapper article:hover .article-coche-wrapper div {
+  animation: spin 0.5s ease 1;
+}
+.articles-wrapper article:hover .article-description {
+  width: 84%;
 }
 
 .composition-et-prix {
@@ -185,45 +213,15 @@ article div h3 {
   text-overflow: ellipsis;
   padding-left: 10px;
   margin-top: 0;
+  width: 75%;
 }
 .composition-et-prix p:nth-child(2) {
   margin-right: 15px;
   margin-top: 0;
 }
 
-#fas-fa-check-circle {
+.fa-check-circle {
   color: white;
-}
-
-.articles-wrapper article {
-  cursor: pointer;
-  opacity: 0.8;
-}
-.articles-wrapper article .article-description {
-  width: 100%;
-}
-.articles-wrapper article:hover {
-  cursor: pointer;
-  opacity: 1;
-}
-.articles-wrapper article:hover .article-description > div :nth-child(2) {
-  animation: translate-prix 0.5s ease 1;
-}
-.articles-wrapper article h3 {
-  padding-left: 10px;
-}
-.articles-wrapper article:hover .article-coche-wrapper {
-  display: flex;
-  /* on affiche le wrapper de la coche */
-  width: 16%;
-  visibility: visible;
-  transform: translateX(0);
-  transition: transform 0.5s ease;
-  overflow: none;
-  background-color: #99e2d0;
-}
-.articles-wrapper article:hover .article-coche-wrapper div {
-  animation: spin 0.5s ease 1;
 }
 
 .article-coche-wrapper {
@@ -231,8 +229,8 @@ article div h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 0;
   visibility: hidden;
+  width: 0;
   transform: translateX(100%);
 }
 
@@ -268,13 +266,13 @@ article div h3 {
   border-radius: 20px;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
   opacity: 1;
-  -webkit-box-shadow: 4px 4px 4px -1px rgba(91, 91, 91, 0.75);
   box-shadow: 4px 4px 4px -1px rgba(91, 91, 91, 0.75);
   opacity: 1;
 }
 
 #commander span:hover {
   opacity: 0.8;
+  box-shadow: 4px 4px 4px -1px rgba(0, 0, 0, 0.75);
 }
 
 footer {

@@ -33,9 +33,6 @@ main {
     z-index: 1;
     opacity: 1;
     animation: disappear 300ms 1.5s forwards;
-    // transform: scale(0);
-    // animation-fill-mode: forwards;
-    // animation-delay: 3s;
     transform-origin: top;
     &::after {
         content: "";
@@ -114,6 +111,7 @@ main .ville {
         margin-bottom: 3rem;
         &:hover {
             // transform: scale(1.02);
+            box-shadow: 4px 4px 4px -1px rgba(0, 0, 0, 0.75);
             opacity: 0.9;
             @include pt.pointer;
         }
